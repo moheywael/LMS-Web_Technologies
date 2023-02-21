@@ -1,0 +1,55 @@
+:root {
+  --clr-primary-100: #5350f7;
+  --clr-primary-200: #4240c6;
+  --clr-primary-300: #323094;
+  --clr-primary-400: #212063;
+  --clr-primary-500: #111031;
+  --clr-secondary-100: #f2f2ff;
+  --clr-secondary-200: #c2c2cc;
+  --clr-secondary-300: #919199;
+  --clr-secondary-400: #616166;
+  --clr-secondary-500: #303033;
+  --clr-nutral-100: #303033;
+  --clr-nutral-200: #616166;
+  --clr-nutral-300: #919199;
+  --clr-nutral-400: #c2c2cc;
+  --clr-nutral-500: #f2f2ff;
+  --clr-danger-100: #ff5555;
+  --clr-danger-200: #cc4444;
+  --clr-danger-300: #993333;
+  --clr-danger-400: #802b2b;
+  --clr-danger-500: #331111;
+  --clr-success-100: #28a745;
+  --clr-success-200: #208637;
+  --clr-success-300: #186429;
+  --clr-success-400: #10431c;
+  --clr-success-500: #08210e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */
