@@ -1,25 +1,40 @@
 # Notes for Future Me
-in this notes i am writng some hints and notes for me in the future about useful approaches and better use cases in writing better and efficient Code 
+in this notes i am writing some hints and notes for me in the future about useful approaches and better use cases in writing better and efficient Code
+<br/><br/>
 
 
 
-# 1# HTML Notes
-this is HTML Notes
+## **1# HTML Notes**
+desc
+- wrapping all html content with a container
+- wrappeing main elements with contianer and use semantic tags like: <p>.main-content > main</p>
+- three
+<br/><br/>
 
-## 2# CSS Notes
+## **2# CSS Notes**
 this is CSS Notes
 
-## 3# JavaScript Notes
+- min(100%, 1000px) <!-- (width, break_point) -->
+<p>semilar to widt: 90%; max-width: 1000px</p>
+
+- 
+
+
+
+<br/><br/>
+
+## **3# JavaScript Notes**
 this is JS Notes
+<br/><br/>
 
-## 4# SCSS Notes
+## **4# SCSS Notes**
 this is SCSS Notes
+<br/><br/>
 
-
-### Importing SCSS Files Approaches!
-<!-- --- -->
-we can include _index.scss in each sass structure file and import all folder sass files into it with scss {@forward}. And import the Index file into the main scss file ***that help us to write less code into our main.scss***. My usual Approach is including each scss file seperatly in my main scss file.
-
+### **Importing SCSS Files Approaches**!
+<!-- <br/> -->
+we can include _index.scss in each sass structure file and import all folder sass files into it with scss {@forward}. And import the Index file into the main scss file `that help us to write less code into our main.scss.` My usual Approach is including each scss file seperatly in my main scss file.
+ 
 
 
 
@@ -29,6 +44,8 @@ we can include _index.scss in each sass structure file and import all folder sas
     Previewing your MD by pressing CTRL + SHIFT + V
 
     ===============================================
+
+    - you can styling it with css
 
     1# Headings:
         1. heading 1: #
@@ -52,7 +69,13 @@ we can include _index.scss in each sass structure file and import all folder sas
     6# Using Images
         ![Alt Img](img_url)
 
-    7#
+    7# Adding A line Break
+        by typing: <br/><br/>
 
+    8# Adding Text in A Block or Block of code
+        by typing: TAP OR 4 spaces
+
+    9# Coloring The Text with Orange
+        by wrapping your text with: ``
 
  -->
