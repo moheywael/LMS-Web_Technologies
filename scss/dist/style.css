@@ -50,7 +50,8 @@ body,
 .container,
 .header,
 .sidebar,
-.main-container {
+.main-container,
+.main {
   height: 100%;
 }
 
@@ -71,12 +72,7 @@ a {
   text-decoration: none;
 }
 
-.header-container .header {
-  background-color: orange;
-}
-
 .main-container .main {
-  height: 100%;
   background-color: var(--clr-secondary-100);
 }
 
@@ -92,14 +88,17 @@ a {
   display: grid;
   grid-template-columns: var(--navbar-width) 1fr;
   grid-template-rows: var(--layout-top-height) 1fr;
-  background-color: var(--clr-primary-100);
 }
 @media (max-width: 700px) {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 10% 1fr;
+    background-color: var(--clr-primary-100);
   }
   .container .sidebar-container {
     display: none;
   }
-}/*# sourceMappingURL=main.css.map */
+  .container .header-container {
+    background-color: var(--clr-primary-100);
+  }
+}/*# sourceMappingURL=style.css.map */

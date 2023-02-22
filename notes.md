@@ -79,3 +79,18 @@ we can include _index.scss in each sass structure file and import all folder sas
         by wrapping your text with: ``
 
  -->
+
+ <!-- 
+     =========== MY COMMENTS ============
+
+    Previewing your MD by pressing CTRL + SHIFT + V
+
+    ===============================================
+
+    1. alias code: to generate a shortcut of any code
+        by writting: git config --global alias.<shortcut> <main cmmd>
+        git config --global alias.st status
+        ex: git status => git st
+    
+    2. 
+  -->

@@ -1,0 +1,42 @@
+// abstract
+@use "abstract/colors";
+@use "abstract/mixins";
+@use "abstract/variables";
+
+// base
+@use "base/resets";
+@use "base/functions";
+@use "base/typography";
+
+// layout
+@use "layout/header";
+@use "layout/main";
+@use "layout/sidebar";
+
+// pages
+// @use "pages/";
+
+// themes
+// @use "themes/";
+
+.container {
+    display: grid;
+    grid-template-columns: var(--navbar-width) 1fr;
+    grid-template-rows: var(--layout-top-height) 1fr;
+
+    @media (max-width: 700px) {
+        & {
+            grid-template-columns: 1fr;
+            grid-template-rows: 10% 1fr;
+            background-color: var(--clr-primary-100);
+        }
+
+        .sidebar-container {
+            display: none;
+        }
+
+        .header-container {
+            background-color: var(--clr-primary-100);
+        }
+    }
+}

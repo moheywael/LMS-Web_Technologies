@@ -21,11 +21,11 @@ $colors: (
 
     nutral: (
         //brightest
-        100: #303033,
-        200: #616166,
-        300: #919199,
-        400: #c2c2cc,
-        500: #f2f2ff,
+        100: #f2f2ff,
+        200: #eeeeee,
+        300: #dddddd,
+        400: #616166,
+        500: #222222,
         //darkest
     ),
 
@@ -57,4 +57,8 @@ $colors: (
             --clr-#{$color}-#{$shade}: #{$value};
         }
     }
+
+    // other Colors
+    --clr-white: #ffffff;
+    --clr-black: #000000;
 }

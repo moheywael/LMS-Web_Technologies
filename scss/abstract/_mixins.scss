@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $breakpoint-up: (
     "md": 20px,
     "lg": 20px,
@@ -9,4 +11,7 @@ $breakpoint-up: (
         @content; //style content
     }
 }
- 
+
+// @function rem($pixel) {
+//     @return math.div($pixel, 16);
+// }
