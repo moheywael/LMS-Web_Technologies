@@ -34,7 +34,42 @@
 
         <!-- :::::::::::: header :::::::::::: -->
         <div class="header-container">
-            <header class="header">header</header>
+            <header class="header">
+
+
+                <!-- ====== mobile ====== -->
+                <!-- <div class="activity-center"></div> -->
+
+                <div class="header__mobile-version">
+
+                    <!-- header menu -->
+                    <div class="header__mobile-version__header-menu">
+                        <i>
+                            <i class="fa-sharp fa-solid fa-bars"></i>
+                        </i>
+                    </div>
+
+                    <!-- activity center -->
+                    <div class="header__mobile-version__activity-center-container">
+                        <!-- this  -->
+                        <div class="header__mobile-version__activity-center-container__activity-center">
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque dolore voluptas hic
+                            consequuntur rem maiores, at deleniti suscipit nihil error ad eius nostrum qui velit
+                            praesentium
+                            assumenda obcaecati molestiae. -->
+                        </div>
+                    </div>
+
+                    <!-- side menu -->
+                    <div class="header__mobile-version__side-menu">
+                        <i>
+                            <i class="fa-sharp fa-solid fa-bars"></i>
+                        </i>
+                    </div>
+
+                </div>
+
+            </header>
         </div>
 
         <!-- :::::::::::: Sdiebar :::::::::::: -->
@@ -110,9 +145,149 @@
 
         <!-- :::::::::::: main :::::::::::: -->
         <div class="main-container">
-            <main class="main-container__grid">main</main>
+            <main class="grid">main</main>
         </div>
 
+
+
+        <!-- #################################### -->
+        <!-- ==================================== -->
+        <!-- :::::::::::::: Extras :::::::::::::: -->
+        <!-- ==================================== -->
+        <!-- #################################### -->
+
+        <!-- :::::::::::: Side Mobile Menu :::::::::::: -->
+        <div class="side-menu-mobile monile-menu active">
+
+            <div class="sidebar__body">
+
+                <ul class="sidebar__body__nav-links">
+
+                    <li>
+                        <a href="#home">
+                            <i>
+                                <i class="fa-solid fa-house"></i>
+                            </i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#scoreborad">
+                            <i>
+                                <i class="fa-solid fa-star"></i>
+                            </i>
+                            <span>Scoreboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#elearning" class="elearning">
+                            <i>
+                                <i class="fa-solid fa-book"></i>
+                            </i>
+                            <span>E-Learning</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+
+                    <ul class="sidebar__body__nav-links__elearning-menu active">
+                        <li><a href="">Quizzes</a></li>
+                        <li><a href="">Assignments</a></li>
+                        <li><a href="">Materials</a></li>
+                        <li><a href="">Meetings</a></li>
+                    </ul>
+
+                    <li>
+                        <a href="#semesterwork">
+                            <i>
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </i>
+                            <span>Semester Work</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+                <div class="sidebar__body__activity-center-container">
+                    <div class="sidebar__body__activity-center-container__activity-center">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- :::::::::::: Header Mobile Menu :::::::::::: -->
+        <div class="header-menu-mobile monile-menu">
+
+            <div class="header-menu-mobile__info">
+
+                <div class="header-menu-mobile__info__img">
+                    <img src="assets/images/Mohey.jpg" alt="">
+                    <!-- <img src="assets/images/Raghad.JPG" alt=""> -->
+                </div>
+
+                <div class="header-menu-mobile__info__details">
+
+                    <div class="header-menu-mobile__info__details__name">Mohey Wael</div>
+                    <div class="header-menu-mobile__info__details__id">1181058</div>
+
+                </div>
+
+            </div>
+
+            <ul class="header-menu-mobile__list">
+
+                <li>
+                    <a href="#home">
+                        <i>
+                            <i class="fa-solid fa-user"></i>
+                        </i>
+                        <span>Account </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#home">
+                        <i>
+                            <i class="fa-solid fa-gear"></i>
+                        </i>
+                        <span>Personal Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#home">
+                        <i>
+                            <i class="fa-solid fa-calendar"></i>
+                        </i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#home">
+                        <i>
+                            <i class="fa-solid fa-coins"></i>
+                        </i>
+                        <span>Financial</span>
+                    </a>
+                </li>
+
+
+            </ul>
+
+            <!-- code -->
+            <div class="header-menu-mobile__signout">
+                <a href="#home">
+                    <span>signout</span>
+                    <i>
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </i>
+                </a>
+            </div>
+        </div>
 
     </div>
 
@@ -122,25 +297,76 @@
         const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
         const activityCenter = document.querySelector(".sidebar__body__activity-center-container__activity-center")
 
+        // const activityCenterMobile = document.querySelector(".header__mobile-version__activity-center-container")
+
+        const activityCenterMobileElement = document.querySelector(".header__mobile-version__activity-center-container__activity-center")
+
+        // buttons
+        const headerMenuBtn = document.querySelector(".header__mobile-version__header-menu")
+        const sideMenuBtn = document.querySelector(".header__mobile-version__side-menu")
+
+        // menus
+        const headerMenuMobile = document.querySelector(".header-menu-mobile")
+        const sideMenuMobile = document.querySelector(".side-menu-mobile")
+
         navLink.addEventListener("click", () => {
             menu.classList.toggle("active")
             document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
         })
 
+        // =================================
+
         activityCenter.addEventListener("click", (e) => {
             document.querySelector(".activity-center").classList.toggle("active")
-            // e.stopPropagation()
-            // e.preventDefault()
         })
+
+        activityCenterMobileElement.addEventListener("click", () => {
+            activityCenterMobileElement.classList.toggle("active")
+        })
+
+        // err: why header btutton not open header menu ?
+        headerMenuBtn.addEventListener("click", (e) => {
+            e.stopPropagation()
+            sideMenuMobile.classList.add("active")
+        })
+
+        // =================================
+
+        headerMenuMobile.addEventListener("click", (e) => {
+            e.stopPropagation()
+        })
+
+        sideMenuMobile.addEventListener("click", (e) => {
+            e.stopPropagation()
+        })
+
+        // err: why side btutton not open side menu ?
+        sideMenuBtn.addEventListener("click", (e) => {
+            e.stopPropagation()
+            headerMenuMobile.classList.add("active")
+        })
+
+        document.addEventListener("click", (e) => {
+            e.stopPropagation()
+
+            // it is working
+            sideMenuMobile.classList.contains("active") ? sideMenuMobile.classList.remove("active") : "";
+            headerMenuMobile.classList.contains("active") ? headerMenuMobile.classList.remove("active") : "";
+        })
+
     </script>
 
 
 
 
     <!-- :::::::::::: extra Screens v:::::::::::: -->
-    <div class="activity-center">
+
+    <!-- <div class="activity-center">
         this is activity center
-    </div>
+    </div> -->
+
+
+
 </body>
 
 </html>

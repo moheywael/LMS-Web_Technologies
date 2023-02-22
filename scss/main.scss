@@ -24,7 +24,7 @@
     grid-template-columns: var(--navbar-width) 1fr;
     grid-template-rows: var(--layout-top-height) 1fr;
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
         & {
             grid-template-columns: 1fr;
             grid-template-rows: 10% 1fr;
@@ -35,8 +35,16 @@
             display: none;
         }
 
-        .header-container {
-            background-color: var(--clr-primary-100);
-        }
+        // .header-container {
+        //     background-color: var(--clr-primary-100);
+        // }
     }
+}
+
+body {
+    @media (max-width: 800px) {
+        background-color: var(--clr-primary-100);
+    }
+
+    // Code here
 }
