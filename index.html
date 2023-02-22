@@ -157,7 +157,14 @@
         <!-- #################################### -->
 
         <!-- :::::::::::: Side Mobile Menu :::::::::::: -->
-        <div class="side-menu-mobile monile-menu active">
+        <div class="side-menu-mobile monile-menu">
+
+            <div class="sidebar__header">
+                <div class="sidebar__header__icon-container">
+                    <div class="sidebar__header__icon-container__icon">ICO</div>
+                    <div class="sidebar__header__icon-container__title">Learning Manage System</div>
+                </div>
+            </div>
 
             <div class="sidebar__body">
 
@@ -209,11 +216,6 @@
 
 
                 </ul>
-
-                <div class="sidebar__body__activity-center-container">
-                    <div class="sidebar__body__activity-center-container__activity-center">
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -295,6 +297,10 @@
     <script>
         const navLink = document.querySelector(".elearning")
         const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
+
+        const navLinkMobile = document.querySelector(".side-menu-mobile li .elearning")
+        const menuMobile = document.querySelector(".side-menu-mobile .sidebar__body__nav-links__elearning-menu ")
+
         const activityCenter = document.querySelector(".sidebar__body__activity-center-container__activity-center")
 
         // const activityCenterMobile = document.querySelector(".header__mobile-version__activity-center-container")
@@ -313,6 +319,13 @@
             menu.classList.toggle("active")
             document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
         })
+
+        navLinkMobile.addEventListener("click", () => {
+            menuMobile.classList.toggle("active")
+            document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
+        })
+
+
 
         // =================================
 

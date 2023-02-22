@@ -167,7 +167,116 @@
         flex-direction: column;
         left: -100%;
         border-radius: 0 10px 10px 0;
-        
+
+        .sidebar__header {
+            padding: var(--padding-value);
+            border-bottom: 2px var(--clr-nutral-200) solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 8%;
+
+            &__icon-container {
+                display: flex;
+                height: 100%;
+                align-items: center;
+
+                &__icon {
+                    background-color: var(--clr-primary-100);
+                    font-size: 80%;
+                    color: var(--clr-white);
+                    border-radius: var(--br-mid);
+                    // aspect-ratio: 1/1;
+                    height: var(--icon-container-d);
+                    // height: 100%;
+                    width: var(--icon-container-d);
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &__title {
+                    font-weight: 600;
+                    margin-left: 10px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .sidebar__body {
+            flex: 1;
+
+            padding: var(--padding-value);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            // body
+            &__nav-links {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-bottom: auto;
+
+                & li {
+                    & a {
+                        // background-color: var(--clr-nutral-200);
+                        width: 100%;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        border-radius: var(--br-mid);
+
+                        &:hover {
+                            background-color: var(--clr-nutral-200);
+                        }
+
+                        & > i {
+                            // border: 2px solid black;
+                            width: var(--icon-container-d);
+                            height: var(--icon-container-d);
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        & span {
+                            // background-color: red;
+                            margin-right: auto;
+                        }
+                    }
+                }
+
+                &__elearning-menu {
+                    display: none;
+                    // height: 0 !important;
+                    padding: 10px;
+                    // background-color: orange;
+                    padding-left: 20%;
+
+                    & li {
+                        // background-color: yellow;
+                        border-left: 2px var(--clr-nutral-200) solid;
+                        padding-left: 10px;
+
+                        & a {
+                            padding: 10px;
+                            font-size: 80%;
+                        }
+                    }
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+
+            // activity center
+        }
     }
 
     // extra

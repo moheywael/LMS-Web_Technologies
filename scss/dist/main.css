@@ -227,6 +227,86 @@ a:active {
     left: -100%;
     border-radius: 0 10px 10px 0;
   }
+  .side-menu-mobile .sidebar__header {
+    padding: var(--padding-value);
+    border-bottom: 2px var(--clr-nutral-200) solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+  }
+  .side-menu-mobile .sidebar__header__icon-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .side-menu-mobile .sidebar__header__icon-container__icon {
+    background-color: var(--clr-primary-100);
+    font-size: 80%;
+    color: var(--clr-white);
+    border-radius: var(--br-mid);
+    height: var(--icon-container-d);
+    width: var(--icon-container-d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .side-menu-mobile .sidebar__header__icon-container__title {
+    font-weight: 600;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .side-menu-mobile .sidebar__body {
+    flex: 1;
+    padding: var(--padding-value);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .side-menu-mobile .sidebar__body__nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: auto;
+  }
+  .side-menu-mobile .sidebar__body__nav-links li a {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: var(--br-mid);
+  }
+  .side-menu-mobile .sidebar__body__nav-links li a:hover {
+    background-color: var(--clr-nutral-200);
+  }
+  .side-menu-mobile .sidebar__body__nav-links li a > i {
+    width: var(--icon-container-d);
+    height: var(--icon-container-d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .side-menu-mobile .sidebar__body__nav-links li a span {
+    margin-right: auto;
+  }
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu {
+    display: none;
+    padding: 10px;
+    padding-left: 20%;
+  }
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu li {
+    border-left: 2px var(--clr-nutral-200) solid;
+    padding-left: 10px;
+  }
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu li a {
+    padding: 10px;
+    font-size: 80%;
+  }
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu.active {
+    display: block;
+  }
   .header-menu-mobile.active {
     right: 0;
     box-shadow: var(--box-shadow), var(--box-shadow-ds);
