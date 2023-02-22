@@ -45,9 +45,67 @@
                         <div class="sidebar__header__icon-container__icon">ICO</div>
                         <div class="sidebar__header__icon-container__title">Learning Manage System</div>
                     </div>
-                    <div class="sidebar__header__toggle"><i class="fa-solid fa-angle-left"></i></div>
+                    <div class="sidebar__header__toggle">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
                 </div>
-                <div class="sidebar__body">body</div>
+                <div class="sidebar__body">
+
+                    <ul class="sidebar__body__nav-links">
+
+                        <li>
+                            <a href="#home">
+                                <i>
+                                    <i class="fa-solid fa-house"></i>
+                                </i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#scoreborad">
+                                <i>
+                                    <i class="fa-solid fa-star"></i>
+                                </i>
+                                <span>Scoreboard</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#elearning" class="elearning">
+                                <i>
+                                    <i class="fa-solid fa-book"></i>
+                                </i>
+                                <span>E-Learning</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                        </li>
+
+                        <ul class="sidebar__body__nav-links__elearning-menu active">
+                            <li><a href="">Quizzes</a></li>
+                            <li><a href="">Assignments</a></li>
+                            <li><a href="">Materials</a></li>
+                            <li><a href="">Meetings</a></li>
+                        </ul>
+
+                        <li>
+                            <a href="#semesterwork">
+                                <i>
+                                    <i class="fa-solid fa-chart-simple"></i>
+                                </i>
+                                <span>Semester Work</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                    <div class="sidebar__body__activity-center-container">
+                        <div class="sidebar__body__activity-center-container__activity-center">
+
+                        </div>
+                    </div>
+                </div>
             </aside>
         </div>
 
@@ -58,6 +116,17 @@
 
 
     </div>
+
+    <!-- :::::::::::: For Test :::::::::::: -->
+    <script>
+        const navLink = document.querySelector(".elearning")
+        const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
+
+        navLink.addEventListener("click", () => {
+            menu.classList.toggle("active")
+            document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
+        })
+    </script>
 </body>
 
 </html>
