@@ -1,8 +1,15 @@
 :root {
     /* measure values */
-    --dimintions: 20px;
-    --padding-value: 1rem;
-    --border-raduis: 10px;
+    --dimintions: 36px;
+    --icon-container-d: 50px;
+    --padding-value: 0.625rem;
+    // --padding-value: 1rem;
+
+    // border raduis
+    --br-sm: 5px;
+    --br-mid: 10px;
+    --br-lg: 20px;
+
     --box-shadow: 0 0 10px 2px rgba(0 0 0 / 0.2);
 
     /* responice */

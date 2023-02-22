@@ -1,3 +1,6 @@
+// includes
+// @forward "../abstract/mixins";
+
 .sidebar-container {
     // global changes
     grid-column: 1/2;
@@ -5,8 +8,85 @@
 
     .sidebar {
         //global styles here
-        background-color: var(--clr-white);
+        // background-color: var(--clr-white);
 
+        display: flex;
+        flex-direction: column;
+        // height: 100%;
+        border-right: 1px gray solid;
+
+        &__header {
+            padding: var(--padding-value);
+            // border: 1px red solid;
+            height: var(--layout-top-height);
+            display: flex;
+            // flex-direction: column;
+            align-items: center;
+            // justify-content: space-between; //temp
+
+            &__icon-container {
+                // border: 1px red solid;
+                display: flex;
+                // width: 80%;
+
+                height: 100%;
+
+                &__icon {
+                    background-color: var(--clr-primary-100);
+                    color: var(--clr-white);
+                    border-radius: var(--br-sm);
+                    aspect-ratio: 1/1;
+                    min-height: 36px;
+                    // width: 36px;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &__title {
+                    font-size: 80%;
+                    font-weight: 600;
+
+                    // test
+                    // display: none;
+                    // margin: 0 40px 0 auto;
+                    margin-left: 10px;
+                    margin-right: auto;
+                }
+            }
+
+            &__toggle {
+                // border: 1px green solid;
+                background-color: var(--clr-nutral-200);
+                border-radius: var(--br-sm);
+                aspect-ratio: 1/1;
+                height: 100%;
+                // min-height: 36px;
+
+                cursor: pointer;
+
+                & i {
+                    // width: var(--dimintions);
+                    // height: var(--dimintions);
+
+                    width: 100%;
+                    height: 100%;
+
+                    // replace with mixin
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    // @include fcenter;
+                }
+            }
+        }
+
+        &__body {
+            border: 1px blue solid;
+            height: 100%;
+        }
         // responsive design
     }
 }
