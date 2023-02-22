@@ -179,6 +179,7 @@
                     background-color: var(--clr-primary-100);
                     // border-radius: var(--br-mid);
                     border-radius: var(--br-lg);
+                    cursor: pointer;
                 }
             }
         }
@@ -186,6 +187,33 @@
     }
 }
 
+// Extra Classes
+
 .rotate {
     rotate: 180deg;
+}
+
+.activity-center {
+    top: -100%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.activity-center.active {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    // left: 50%;
+    // translate: -50% -50%;
+    background-color: var(--clr-primary-100);
+    padding: 10px;
+    color: white;
+    border-radius: var(--br-mid);
+    // box-shadow: 0 0 0 1000px rgba(0 0 0 / 0.9);
+    box-shadow: 0 0 0 10000px rgba(0 0 0 / 0.9);
+
+    // transition: top 500ms ease, box-shadow 0ms ease;
+    transition: top 500ms ease;
+    // user-select: none;
 }

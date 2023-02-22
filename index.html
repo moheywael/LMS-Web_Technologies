@@ -102,7 +102,6 @@
 
                     <div class="sidebar__body__activity-center-container">
                         <div class="sidebar__body__activity-center-container__activity-center">
-
                         </div>
                     </div>
                 </div>
@@ -121,12 +120,27 @@
     <script>
         const navLink = document.querySelector(".elearning")
         const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
+        const activityCenter = document.querySelector(".sidebar__body__activity-center-container__activity-center")
 
         navLink.addEventListener("click", () => {
             menu.classList.toggle("active")
             document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
         })
+
+        activityCenter.addEventListener("click", (e) => {
+            document.querySelector(".activity-center").classList.toggle("active")
+            // e.stopPropagation()
+            // e.preventDefault()
+        })
     </script>
+
+
+
+
+    <!-- :::::::::::: extra Screens v:::::::::::: -->
+    <div class="activity-center">
+        this is activity center
+    </div>
 </body>
 
 </html>

@@ -1,20 +1,19 @@
 :root {
-    /* measure values */
+    // measure value
     --dimintions: 36px;
     --icon-container-d: 40px;
     --padding-value: 0.625rem;
-    // --padding-value: 15px;
     --padding-btn: 10px;
-    // --padding-value: 1rem;
 
     // border raduis
     --br-sm: 5px;
     --br-mid: 10px;
     --br-lg: 20px;
 
+    // box shadow
     --box-shadow: 0 0 10px 2px rgba(0 0 0 / 0.2);
 
-    /* responice */
+    // responsive
     --navbar-width: 250px; /* +animation on width change*/
     --layout-top-height: 60px;
 }
