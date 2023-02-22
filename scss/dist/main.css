@@ -85,8 +85,9 @@ a:active {
   background-color: var(--clr-secondary-100);
 }
 
-.main-container .main {
+.main-container__grid {
   background-color: var(--clr-secondary-100);
+  background-color: red;
 }
 
 .sidebar-container {
@@ -242,4 +243,4 @@ a:active {
   .container .header-container {
     background-color: var(--clr-primary-100);
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
