@@ -307,14 +307,18 @@
 
     <!-- :::::::::::: For Test :::::::::::: -->
     <script>
+        //Desktop Version
         const navLink = document.querySelector(".elearning")
         const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
 
+        //Mobile Version
         const navLinkMobile = document.querySelector(".side-menu-mobile li .elearning")
         const menuMobile = document.querySelector(".side-menu-mobile .sidebar__body__nav-links__elearning-menu ")
 
+        // Activity Center For Desktop Version
         const activityCenter = document.querySelector(".sidebar__body__activity-center-container__activity-center")
 
+        // Activity Center For Mobile Version
         const activityCenterMobileElement = document.querySelector(".header__mobile-version__activity-center-container__activity-center")
 
         // buttons
@@ -324,6 +328,8 @@
         // menus
         const headerMenuMobile = document.querySelector(".header-menu-mobile")
         const sideMenuMobile = document.querySelector(".side-menu-mobile")
+
+        // ========================================================
 
         navLink.addEventListener("click", () => {
             menu.classList.toggle("active")
@@ -335,11 +341,11 @@
             document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
         })
 
-        // =================================
-
         activityCenter.addEventListener("click", (e) => {
             document.querySelector(".activity-center").classList.toggle("active")
         })
+
+        // =================================
 
         activityCenterMobileElement.addEventListener("click", (e) => {
             e.stopPropagation()
@@ -353,7 +359,14 @@
             sideMenuMobile.classList.add("active")
         })
 
+        sideMenuBtn.addEventListener("click", (e) => {
+            e.stopPropagation()
+            headerMenuMobile.classList.add("active")
+        })
+
         // =================================
+
+        // Stopping Their propegation
 
         headerMenuMobile.addEventListener("click", (e) => {
             e.stopPropagation()
@@ -364,10 +377,6 @@
         })
 
         // err: why side btutton not open side menu ?
-        sideMenuBtn.addEventListener("click", (e) => {
-            e.stopPropagation()
-            headerMenuMobile.classList.add("active")
-        })
 
         document.addEventListener("click", (e) => {
             e.stopPropagation()
