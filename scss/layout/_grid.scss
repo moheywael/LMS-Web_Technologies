@@ -8,6 +8,7 @@
         display: grid;
 
         @media (max-width: 800px) {
+            background-color: var(--clr-white);
             padding: var(--padding-mobile-value);
         }
     }

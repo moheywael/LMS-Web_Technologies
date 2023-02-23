@@ -48,6 +48,10 @@
                         width: 100%;
                         height: 100%;
 
+                        // // just for test
+                        min-height: 0;
+                        // overflow: hidden;
+
                         // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
                         // ::::::::::::::: here the top transition is working :::::::::::::::
                         // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -57,13 +61,24 @@
                         // :::     i did here by setting it initial value as a 0**        :::
                         // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-                        transition: width 0.5s, height 0.5s, background-color 0.2s, border-radius 0.5s, top 0.5s;
+                        transition: width 0.5s, height 0.5s, background-color 0.2s, border-radius 0.5s, top 0.5s,
+                            box-shadow 0.3s, min-height 0.5s;
+
+                        // make the
 
                         &.active {
-                            background-color: var(--clr-primary-100);
-                            // transition: top 2s ease 0s;
-                            width: 200%;
-                            height: 1000%;
+                            background-color: var(--clr-secondary-100);
+                            // overflow: scroll;
+                            // background-color: #f2f2ff;
+                            // box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                            // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                            // border: 2px var(--clr-primary-100) solid;
+                            border: 2px #5350f754 solid;
+                            width: 220%;
+
+                            height: auto;
+                            min-height: 200px;
+                            padding: 10px;
                             border-radius: var(--br-lg);
                             top: 200%;
                         }
