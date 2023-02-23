@@ -116,7 +116,7 @@
                             </a>
                         </li>
 
-                        <ul class="sidebar__body__nav-links__elearning-menu active">
+                        <ul class="sidebar__body__nav-links__elearning-menu">
                             <li><a href="">Quizzes</a></li>
                             <li><a href="">Assignments</a></li>
                             <li><a href="">Materials</a></li>
@@ -157,7 +157,7 @@
         <!-- #################################### -->
 
         <!-- :::::::::::: Side Mobile Menu :::::::::::: -->
-        <div class="side-menu-mobile monile-menu">
+        <div class="side-menu-mobile monile-menu active">
 
             <div class="sidebar__header">
                 <div class="sidebar__header__icon-container">
@@ -171,7 +171,7 @@
                 <ul class="sidebar__body__nav-links">
 
                     <li>
-                        <a href="#home">
+                        <a href="/index.html">
                             <i>
                                 <i class="fa-solid fa-house"></i>
                             </i>
@@ -189,7 +189,7 @@
                     </li>
 
                     <li>
-                        <a href="#elearning" class="elearning">
+                        <a class="elearning">
                             <i>
                                 <i class="fa-solid fa-book"></i>
                             </i>
@@ -198,11 +198,11 @@
                         </a>
                     </li>
 
-                    <ul class="sidebar__body__nav-links__elearning-menu active">
-                        <li><a href="">Quizzes</a></li>
-                        <li><a href="">Assignments</a></li>
-                        <li><a href="">Materials</a></li>
-                        <li><a href="">Meetings</a></li>
+                    <ul class="sidebar__body__nav-links__elearning-menu">
+                        <li><a href="#quizzes">Quizzes</a></li>
+                        <li><a href="#assignments">Assignments</a></li>
+                        <li><a href="#materials">Materials</a></li>
+                        <li><a href="#meetings">Meetings</a></li>
                     </ul>
 
                     <li>
@@ -227,7 +227,6 @@
 
                 <div class="header-menu-mobile__info__img">
                     <img src="assets/images/Mohey.jpg" alt="">
-                    <!-- <img src="assets/images/Raghad.JPG" alt=""> -->
                 </div>
 
                 <div class="header-menu-mobile__info__details">
@@ -303,8 +302,6 @@
 
         const activityCenter = document.querySelector(".sidebar__body__activity-center-container__activity-center")
 
-        // const activityCenterMobile = document.querySelector(".header__mobile-version__activity-center-container")
-
         const activityCenterMobileElement = document.querySelector(".header__mobile-version__activity-center-container__activity-center")
 
         // buttons
@@ -325,16 +322,16 @@
             document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
         })
 
-
-
         // =================================
 
         activityCenter.addEventListener("click", (e) => {
             document.querySelector(".activity-center").classList.toggle("active")
         })
 
-        activityCenterMobileElement.addEventListener("click", () => {
-            activityCenterMobileElement.classList.toggle("active")
+        activityCenterMobileElement.addEventListener("click", (e) => {
+            e.stopPropagation()
+            activityCenterMobileElement.classList.add("active")
+
         })
 
         // err: why header btutton not open header menu ?
@@ -364,7 +361,11 @@
 
             // it is working
             sideMenuMobile.classList.contains("active") ? sideMenuMobile.classList.remove("active") : "";
+
+            activityCenterMobileElement.classList.contains("active") ? activityCenterMobileElement.classList.remove("active") : "";
+
             headerMenuMobile.classList.contains("active") ? headerMenuMobile.classList.remove("active") : "";
+
         })
 
     </script>
@@ -377,8 +378,6 @@
     <!-- <div class="activity-center">
         this is activity center
     </div> -->
-
-
 
 </body>
 
