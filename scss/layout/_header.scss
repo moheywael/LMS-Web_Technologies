@@ -41,19 +41,30 @@
                     &__activity-center {
                         position: absolute;
                         background-color: rgba(0, 0, 0, 0.241);
+                        top: 0;
                         left: 50%;
                         translate: -50%;
                         border-radius: var(--br-mid);
                         width: 100%;
                         height: 100%;
-                        transition: width 0.5s, height 0.5s, background-color 0.5s;
-                        // transition: top 2s ease 0s;
+
+                        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                        // ::::::::::::::: here the top transition is working :::::::::::::::
+                        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                        // :::        The reason this is needed is because you            :::
+                        // ::: can't transition from a keyword, and the default value for :::
+                        // ::: top is auto. So you have to spicify and give it a value as :::
+                        // :::     i did here by setting it initial value as a 0**        :::
+                        // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+                        transition: width 0.5s, height 0.5s, background-color 0.2s, border-radius 0.5s, top 0.5s;
 
                         &.active {
                             background-color: var(--clr-primary-100);
                             // transition: top 2s ease 0s;
                             width: 200%;
                             height: 1000%;
+                            border-radius: var(--br-lg);
                             top: 200%;
                         }
                     }
