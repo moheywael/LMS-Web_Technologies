@@ -230,7 +230,23 @@
         <!-- :::::::::::: main :::::::::::: -->
         <div class="main-container">
             <main class="grid">
+
+
                 <!-- this is the main -->
+
+
+
+
+
+                <!-- EXTRAS -->
+                <!-- Preloader Overlay -->
+                <div class="preloader-overlay ">
+                    <div class="lds-facebook">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </main>
         </div>
 
@@ -405,6 +421,8 @@
 
     <!-- :::::::::::: For Test :::::::::::: -->
     <script>
+
+        // ============ variables
         //Desktop Version
         const navLink = document.querySelector(".elearning")
         const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
@@ -436,6 +454,10 @@
         // menus
         const headerMenuMobile = document.querySelector(".header-menu-mobile")
         const sideMenuMobile = document.querySelector(".side-menu-mobile")
+
+
+        // 
+        const preloaderOverlay = document.querySelector(".preloader-overlay")
 
 
         // ========================================================
@@ -510,6 +532,12 @@
 
             headerMenuMobile.classList.contains("active") ? headerMenuMobile.classList.remove("active") : "";
 
+        })
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                preloaderOverlay.style.display = "none"
+            }, 2000)
         })
 
     </script>

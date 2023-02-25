@@ -34,6 +34,8 @@
 
                 // activiy Center
                 &__activity-center-container {
+                    // background-color: rebeccapurple;
+                    z-index: 100;
                     width: 40%;
                     height: 100%;
                     position: relative;
@@ -219,6 +221,7 @@
         height: 100%;
         // Transition
         transition: left 250ms, right 250ms;
+        z-index: 200;
     }
 
     .header-menu-mobile {

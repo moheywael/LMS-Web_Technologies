@@ -1,10 +1,8 @@
 .main-container {
     // background-color: yellow;
     .grid {
-        // border-top: 2px solid;
-        // global
         background-color: var(--clr-secondary-100);
-        // background-color: red;
+        position: relative;
         display: grid;
 
         @media (max-width: 800px) {
