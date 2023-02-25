@@ -180,6 +180,10 @@ a:hover {
     border-radius: var(--br-sm);
     padding: 10px;
   }
+  .header-container .header__mobile-version__activity-center-container__activity-center.active .header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container {
+    display: flex;
+    flex-direction: column;
+  }
   .header-container .header__mobile-version__activity-center-container__activity-center.active .header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__header {
     display: flex;
     align-items: center;
@@ -194,7 +198,6 @@ a:hover {
     display: none;
     flex-direction: column;
     padding: 10px 0;
-    height: 0;
   }
   .header-container .header__mobile-version__activity-center-container__activity-center.active .header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__body.active {
     height: auto;
