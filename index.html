@@ -27,6 +27,7 @@
 
     <!-- Main -->
     <title>Home</title>
+    <link rel="website icon" href="assets/images/lms-icon.png">
 </head>
 
 <body>
@@ -134,14 +135,21 @@
                         </ul>
 
                         <li>
-                            <a href="#semesterwork">
+                            <a href="#semesterwork" class="semesterwork">
                                 <i>
                                     <i class="fa-solid fa-chart-simple"></i>
                                 </i>
                                 <span>Semester Work</span>
+                                <i class="fa-solid fa-angle-down"></i>
                             </a>
                         </li>
 
+                        <ul class="sidebar__body__nav-links__semesterwork-menu">
+                            <li><a href="">Quizzes</a></li>
+                            <li><a href="">Assignments</a></li>
+                            <li><a href="">Materials</a></li>
+                            <li><a href="">Meetings</a></li>
+                        </ul>
 
                     </ul>
 
@@ -328,9 +336,15 @@
         const navLink = document.querySelector(".elearning")
         const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
 
+        const semesterWorkLink = document.querySelector(".semesterwork")
+        const semesterMenu = document.querySelector(".sidebar__body__nav-links__semesterwork-menu ")
+
         //Mobile Version
         const navLinkMobile = document.querySelector(".side-menu-mobile li .elearning")
         const menuMobile = document.querySelector(".side-menu-mobile .sidebar__body__nav-links__elearning-menu ")
+
+        // const semesterWorkLinkMobile = document.querySelector(".side-menu-mobile li .elearning")
+        // const semesterWorkMenuMobile = document.querySelector(".side-menu-mobile .sidebar__body__nav-links__elearning-menu ")
 
         // Activity Center For Desktop Version
         const activityCenter = document.querySelector(".sidebar__body__activity-center-container__activity-center")
@@ -347,6 +361,10 @@
         const sideMenuMobile = document.querySelector(".side-menu-mobile")
 
         // ========================================================
+
+        semesterWorkLink.addEventListener("click", () => {
+            semesterMenu.classList.toggle("active")
+        })
 
         navLink.addEventListener("click", () => {
             menu.classList.toggle("active")

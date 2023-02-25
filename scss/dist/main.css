@@ -420,20 +420,20 @@ a:active {
 .sidebar-container .sidebar__body__nav-links li a span {
   margin-right: auto;
 }
-.sidebar-container .sidebar__body__nav-links__elearning-menu {
+.sidebar-container .sidebar__body__nav-links__elearning-menu, .sidebar-container .sidebar__body__nav-links__semesterwork-menu {
   display: none;
   padding: 10px;
   padding-left: 20%;
 }
-.sidebar-container .sidebar__body__nav-links__elearning-menu li {
+.sidebar-container .sidebar__body__nav-links__elearning-menu li, .sidebar-container .sidebar__body__nav-links__semesterwork-menu li {
   border-left: 2px var(--clr-nutral-200) solid;
   padding-left: 10px;
 }
-.sidebar-container .sidebar__body__nav-links__elearning-menu li a {
+.sidebar-container .sidebar__body__nav-links__elearning-menu li a, .sidebar-container .sidebar__body__nav-links__semesterwork-menu li a {
   padding: 10px;
   font-size: 80%;
 }
-.sidebar-container .sidebar__body__nav-links__elearning-menu.active {
+.sidebar-container .sidebar__body__nav-links__elearning-menu.active, .sidebar-container .sidebar__body__nav-links__semesterwork-menu.active {
   display: block;
 }
 .sidebar-container .sidebar__body__activity-center-container {
