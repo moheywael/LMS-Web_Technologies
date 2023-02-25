@@ -143,6 +143,7 @@ a:hover {
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
+    transition: all 5s;
     align-items: center;
     justify-content: center;
     gap: 10px;
