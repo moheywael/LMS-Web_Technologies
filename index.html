@@ -84,7 +84,7 @@
                                     class="header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container">
                                     <div
                                         class="header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__header">
-                                        14 file uploded
+                                        4 file uploded
                                         <i class="fa-solid fa-angle-down"></i>
                                     </div>
                                     <div
@@ -231,9 +231,13 @@
         <div class="main-container">
             <main class="grid">
 
-
-                <!-- this is the main -->
-
+                <center>
+                    <h2>this is main Content</h2>
+                </center>
+                <center>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi fugiat mollitia magnam
+                        nesciunt velit itaque ullam ipsa dignissimos natus repellendus.</p>
+                </center>
 
 
 
@@ -308,16 +312,16 @@
                     </ul>
 
                     <li>
-                        <a href="#semesterwork">
+                        <a class="semesterwork-mobile-btn">
                             <i>
                                 <i class="fa-solid fa-chart-simple"></i>
                             </i>
-                            <span>Semester Work</span>
+                            <span>Semester Works</span>
                             <i class="fa-solid fa-angle-down"></i>
                         </a>
                     </li>
 
-                    <ul class="sidebar__body__nav-links__elearning-menu">
+                    <ul class="sidebar__body__nav-links__semesterwork-menu">
                         <li><a href="#quizzes">Quizzes</a></li>
                         <li><a href="#assignments">Assignments</a></li>
                         <li><a href="#materials">Materials</a></li>
@@ -418,136 +422,6 @@
         </div>
 
     </div>
-
-    <!-- :::::::::::: For Test :::::::::::: -->
-    <script>
-
-        // ============ variables
-        //Desktop Version
-        const navLink = document.querySelector(".elearning")
-        const menu = document.querySelector(".sidebar__body__nav-links__elearning-menu ")
-
-        const semesterWorkLink = document.querySelector(".semesterwork")
-        const semesterMenu = document.querySelector(".sidebar__body__nav-links__semesterwork-menu ")
-
-        //Mobile Version
-        const navLinkMobile = document.querySelector(".side-menu-mobile li .elearning")
-        const menuMobile = document.querySelector(".side-menu-mobile .sidebar__body__nav-links__elearning-menu ")
-
-        // const semesterWorkLinkMobile = document.querySelector(".side-menu-mobile li .elearning")
-        // const semesterWorkMenuMobile = document.querySelector(".side-menu-mobile .sidebar__body__nav-links__elearning-menu ")
-
-        // Activity Center For Desktop Version
-        const activityCenter = document.querySelector(".sidebar__body__activity-center-container__activity-center")
-
-        // Activity Center For Mobile Version
-        const activityCenterMobileElement = document.querySelector(".header__mobile-version__activity-center-container__activity-center")
-
-        // file uploaded section
-        const fileUploadedBtn = document.querySelector(".header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__header")
-        const fileUploadedBody = document.querySelector(".header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__body")
-
-        // buttons
-        const headerMenuBtn = document.querySelector(".header__mobile-version__header-menu")
-        const sideMenuBtn = document.querySelector(".header__mobile-version__side-menu")
-
-        // menus
-        const headerMenuMobile = document.querySelector(".header-menu-mobile")
-        const sideMenuMobile = document.querySelector(".side-menu-mobile")
-
-
-        // 
-        const preloaderOverlay = document.querySelector(".preloader-overlay")
-
-
-        // ========================================================
-
-        fileUploadedBtn.addEventListener("click", () => {
-            fileUploadedBody.classList.toggle("active")
-        })
-
-        semesterWorkLink.addEventListener("click", () => {
-            semesterMenu.classList.toggle("active")
-        })
-
-        navLink.addEventListener("click", () => {
-            menu.classList.toggle("active")
-            document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
-        })
-
-        navLinkMobile.addEventListener("click", () => {
-            menuMobile.classList.toggle("active")
-            document.querySelector(".elearning .fa-angle-down").classList.toggle("rotate")
-        })
-
-        activityCenter.addEventListener("click", (e) => {
-            document.querySelector(".activity-center").classList.toggle("active")
-        })
-
-        // =================================
-
-        activityCenterMobileElement.addEventListener("click", (e) => {
-            e.stopPropagation()
-            activityCenterMobileElement.classList.add("active")
-
-        })
-
-        // err: why header btutton not open header menu ?
-        headerMenuBtn.addEventListener("click", (e) => {
-            e.stopPropagation()
-            sideMenuMobile.classList.add("active")
-        })
-
-        sideMenuBtn.addEventListener("click", (e) => {
-            e.stopPropagation()
-            headerMenuMobile.classList.add("active")
-        })
-
-        // =================================
-
-        // Stopping Their propegation
-
-        headerMenuMobile.addEventListener("click", (e) => {
-            e.stopPropagation()
-        })
-
-        sideMenuMobile.addEventListener("click", (e) => {
-            e.stopPropagation()
-        })
-
-        // err: why side btutton not open side menu ?
-
-        document.addEventListener("click", (e) => {
-            e.stopPropagation()
-
-            // it is working
-            sideMenuMobile.classList.contains("active") ? sideMenuMobile.classList.remove("active") : "";
-
-            // activityCenterMobileElement.classList.contains("active") ? activityCenterMobileElement.classList.remove("active") : "";
-
-            if (activityCenterMobileElement.classList.contains("active")) {
-                activityCenterMobileElement.classList.remove("active")
-                fileUploadedBody.classList.remove("active")
-            }
-
-            headerMenuMobile.classList.contains("active") ? headerMenuMobile.classList.remove("active") : "";
-
-        })
-
-        window.addEventListener("load", () => {
-            setTimeout(() => {
-                preloaderOverlay.style.display = "none"
-            }, 2000)
-        })
-
-    </script>
-
-
-    <!-- :::::::::::: extra Screens v:::::::::::: -->
-
-    <!-- <div class="activity-center">
-        this is activity center
-    </div> -->
 
 </body>
 

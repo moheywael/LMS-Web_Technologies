@@ -398,20 +398,20 @@ a:hover {
   .side-menu-mobile .sidebar__body__nav-links li a span {
     margin-right: auto;
   }
-  .side-menu-mobile .sidebar__body__nav-links__elearning-menu {
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu, .side-menu-mobile .sidebar__body__nav-links__semesterwork-menu {
     display: none;
     padding: 10px;
     padding-left: 20%;
   }
-  .side-menu-mobile .sidebar__body__nav-links__elearning-menu li {
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu li, .side-menu-mobile .sidebar__body__nav-links__semesterwork-menu li {
     border-left: 2px var(--clr-nutral-200) solid;
     padding-left: 10px;
   }
-  .side-menu-mobile .sidebar__body__nav-links__elearning-menu li a {
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu li a, .side-menu-mobile .sidebar__body__nav-links__semesterwork-menu li a {
     padding: 10px;
     font-size: 80%;
   }
-  .side-menu-mobile .sidebar__body__nav-links__elearning-menu.active {
+  .side-menu-mobile .sidebar__body__nav-links__elearning-menu.active, .side-menu-mobile .sidebar__body__nav-links__semesterwork-menu.active {
     display: block;
   }
   .header-menu-mobile.active {
