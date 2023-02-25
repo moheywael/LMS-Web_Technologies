@@ -53,20 +53,85 @@
                     <!-- activity center -->
                     <div class="header__mobile-version__activity-center-container ">
                         <!-- this  -->
-                        <div class="header__mobile-version__activity-center-container__activity-center">
+                        <div class="header__mobile-version__activity-center-container__activity-center active">
 
-                            <!-- 
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam cupiditate delectus reiciendis
-                            corporis et mollitia! Molestiae mollitia harum id ab nesciunt temporibus quia, cumque
-                            aliquam deleniti eaque illo qui molestias, facilis ut porro blanditiis amet ratione. A fugit
-                            deleniti ut velit quod voluptatem alias repellat quia. Harum voluptate necessitatibus et. 
-                            corporis et mollitia! Molestiae mollitia harum id ab nesciunt temporibus quia, cumque
-                            aliquam deleniti eaque illo qui molestias, facilis ut porro blanditiis amet ratione. A fugit
-                            deleniti ut velit quod voluptatem alias repellat quia. Harum voluptate necessitatibus et. 
-                            corporis et mollitia! Molestiae mollitia harum id ab nesciunt temporibus quia, cumque
-                            aliquam deleniti eaque illo qui molestias, facilis ut porro blanditiis amet ratione. A fugit
-                            deleniti ut velit quod voluptatem alias repellat quia. Harum voluptate necessitatibus et. 
-                            -->
+                            <div
+                                class="header__mobile-version__activity-center-container__activity-center__header-container">
+                                <div
+                                    class="header__mobile-version__activity-center-container__activity-center__header-container__link">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                <div
+                                    class="header__mobile-version__activity-center-container__activity-center__header-container__link">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                <div
+                                    class="header__mobile-version__activity-center-container__activity-center__header-container__link">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                <div
+                                    class="header__mobile-version__activity-center-container__activity-center__header-container__link">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                            </div>
+
+                            <div
+                                class="header__mobile-version__activity-center-container__activity-center__body-container">
+                                <a
+                                    class="header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-btn">browse</a>
+
+                                <div
+                                    class="header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container">
+                                    <div
+                                        class="header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__header">
+                                        14 file uploded
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div
+                                        class="header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__body active">
+
+                                        <ul>
+
+
+                                            <li>
+                                                <div class="name">File name</div>
+                                                <div class="controls">
+                                                    <i class="fa-solid fa-xmark"></i>
+
+                                                </div>
+                                            </li>
+
+
+                                            <li>
+                                                <div class="name">File name</div>
+                                                <div class="controls">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </div>
+                                            </li>
+
+
+                                            <li>
+                                                <div class="name">File name</div>
+                                                <div class="controls">
+                                                    <i class="fa-solid fa-xmark"></i>
+
+                                                </div>
+                                            </li>
+
+
+                                            <li>
+                                                <div class="name">File name</div>
+                                                <div class="controls">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </div>
+                                            </li>
+
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -300,7 +365,7 @@
                 <li>
                     <a href="#home">
                         <i>
-                            <i class="fa-solid fa-coins"></i>
+                            <i class="fa-sharp fa-solid fa-bell"></i>
                         </i>
                         <span>Notification</span>
                     </a>
@@ -309,7 +374,7 @@
                 <li>
                     <a href="#home">
                         <i>
-                            <i class="fa-solid fa-coins"></i>
+                            <i class="fa-sharp fa-solid fa-fire-flame-curved"></i>
                         </i>
                         <span>Streaks</span>
                     </a>
@@ -352,6 +417,10 @@
         // Activity Center For Mobile Version
         const activityCenterMobileElement = document.querySelector(".header__mobile-version__activity-center-container__activity-center")
 
+        // file uploaded section
+        const fileUploadedBtn = document.querySelector(".header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__header")
+        const fileUploadedBody = document.querySelector(".header__mobile-version__activity-center-container__activity-center__body-container__files-uploaded-container__body")
+
         // buttons
         const headerMenuBtn = document.querySelector(".header__mobile-version__header-menu")
         const sideMenuBtn = document.querySelector(".header__mobile-version__side-menu")
@@ -360,7 +429,12 @@
         const headerMenuMobile = document.querySelector(".header-menu-mobile")
         const sideMenuMobile = document.querySelector(".side-menu-mobile")
 
+
         // ========================================================
+
+        fileUploadedBtn.addEventListener("click", () => {
+            fileUploadedBody.classList.toggle("active")
+        })
 
         semesterWorkLink.addEventListener("click", () => {
             semesterMenu.classList.toggle("active")
@@ -419,7 +493,12 @@
             // it is working
             sideMenuMobile.classList.contains("active") ? sideMenuMobile.classList.remove("active") : "";
 
-            activityCenterMobileElement.classList.contains("active") ? activityCenterMobileElement.classList.remove("active") : "";
+            // activityCenterMobileElement.classList.contains("active") ? activityCenterMobileElement.classList.remove("active") : "";
+
+            if (activityCenterMobileElement.classList.contains("active")) {
+                activityCenterMobileElement.classList.remove("active")
+                fileUploadedBody.classList.remove("active")
+            }
 
             headerMenuMobile.classList.contains("active") ? headerMenuMobile.classList.remove("active") : "";
 
