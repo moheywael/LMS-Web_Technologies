@@ -337,6 +337,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     left: -100%;
+    border-radius: 0 10px 10px 0;
   }
   .side-menu-mobile .sidebar__header {
     padding: var(--padding-mobile-value);

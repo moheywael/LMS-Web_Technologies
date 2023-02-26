@@ -78,11 +78,15 @@ activityCenterMobileElement.addEventListener("click", (e) => {
 // err: why header btutton not open header menu ?
 headerMenuBtn.addEventListener("click", (e) => {
     e.stopPropagation()
+    activityCenterMobileElement.classList.contains("active") ? activityCenterMobileElement.classList.remove("active") : "";
+    headerMenuMobile.classList.contains("active") ? headerMenuMobile.classList.remove("active") : "";
     sideMenuMobile.classList.add("active")
 })
 
 sideMenuBtn.addEventListener("click", (e) => {
     e.stopPropagation()
+    activityCenterMobileElement.classList.contains("active") ? activityCenterMobileElement.classList.remove("active") : "";
+    sideMenuMobile.classList.contains("active") ? sideMenuMobile.classList.remove("active") : "";
     headerMenuMobile.classList.add("active")
 })
 
